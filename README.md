@@ -1,154 +1,261 @@
-# XYLEM — Edge-Powered Explainable AI Crop Recommendation
+# Edge AI Crop Recommendation System — Edge-Powered Explainable AI Crop Recommendation System
 
-A Flutter-based smart agriculture application that combines soil and environmental inputs, on-device crop prediction, and human-readable explanations to help users understand crop recommendations.
 
-> **Project provenance:** This repository is an independently maintained portfolio copy prepared from the project snapshot supplied by Harinand P. The supplied snapshot contains collaborative project files and existing contributor references. Do not interpret this repository as a claim that every component was individually authored by one person. Update `CONTRIBUTIONS.md` with the exact work you personally implemented before publishing.
 
-## What is included in this code snapshot
+## Overview
 
-- Flutter application with dashboard, monitoring, crop recommendation, market, weather, government-scheme and history screens.
-- ONNX crop prediction model integration using seven input features: nitrogen, phosphorus, potassium, temperature, humidity, pH and rainfall.
-- XAI explanation service that compares sensor values with crop-specific agronomic ranges and generates feature-level explanations, favorable factors and limiting factors.
-- Local JSON prediction-history storage and statistics.
-- ESP32 sensor communication/UI integration code in the Flutter application.
-- English and Kannada localization resources.
-- Optional weather and agricultural-news API integrations.
+Edge AI Crop Recommendation System is a Flutter-based smart agriculture application designed to bring soil and environmental information, machine-learning-based crop recommendations, and agricultural resources into one mobile interface.
 
-## Important note about explainability
+The supplied project includes an ONNX-based crop prediction service, an explainability layer that describes factors influencing a recommendation, ESP32 sensor connectivity, local prediction history, weather information, agricultural market prices, and government-scheme information. The interface supports English and Kannada.
 
-The current `XAIExplanationService` in this snapshot uses crop-specific ranges, predefined feature-importance weights and rule-based impact labels to generate human-readable explanations. This is a practical explanation layer; it is **not a SHAP or LIME implementation**, and its feature-importance percentages should not be interpreted as mathematically derived model attributions. If SHAP/LIME is added later, document the exact explainer, background dataset and validation method separately.
 
-## Technology stack
+## Key Features
 
-- **Mobile:** Flutter, Dart, Provider
-- **ML inference:** ONNX model integration
-- **Explainability:** crop-range-based feature analysis and rule-based explanations
-- **Local persistence:** JSON file storage
-- **Hardware connectivity:** ESP32 / sensor data integration
-- **Localization:** English and Kannada
+### 1. Crop recommendation
+- Uses seven input features: Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, soil pH, and rainfall.
+- Integrates an ONNX model for crop prediction.
+- Displays a recommended crop and prediction confidence as implemented by the application.
 
-## Application screenshots
+### 2. Explainable crop insights
+- Presents feature-level explanations for a crop recommendation.
+- Shows favorable conditions and limiting factors.
+- Provides a human-readable explanation of why a crop may be suitable.
 
-The following screenshots show the Flutter application's Kannada interface and key modules.
+**Implementation note:** The current `XAIExplanationService` uses crop-specific ranges, configured feature-importance weights, and rule-based impact labels. It is not a SHAP or LIME attribution implementation. The displayed weights should not be interpreted as model-derived SHAP/LIME values.
+
+### 3. IoT sensor monitoring
+- Includes an ESP32 connection interface for retrieving sensor readings.
+- Provides fields for the ESP32 IP address and port.
+- Includes a test-data option in the monitoring interface.
+- Supports soil and environmental data display.
+
+The app's sensor interface is present in the source. Actual live readings require the ESP32 firmware, compatible sensors, network connectivity, and matching API endpoints to be configured and tested.
+
+### 4. Weather dashboard
+- Displays weather information and related environmental indicators.
+- Includes location-related functionality.
+- Uses an optional weather API integration.
+
+### 5. Agricultural market information
+- Provides a market section for displaying crop/commodity prices.
+- Uses the market service included in the application.
+
+### 6. Government agricultural schemes
+- Includes national and state-level scheme information.
+- Supports location-aware scheme presentation and category filtering as documented in `GOVT_SCHEMES_GUIDE.md`.
+- Provides links to scheme application portals.
+
+Scheme details and deadlines can change. Verify eligibility, benefit amounts, and application dates on the relevant official government portal before acting on the information.
+
+### 7. Local prediction history
+- Saves and displays previous crop predictions.
+- Includes prediction-history statistics and management actions.
+- Uses local app storage; this is not a cloud-synchronised database.
+
+### 8. English and Kannada interface
+- Includes English and Kannada localization resources.
+- Provides a language selector in the application.
+- Includes localized labels and XAI/history interface text.
+
+## Application Screenshots
+
+The following screenshots are from the supplied Android application build and show the Kannada interface.
 
 | Dashboard | Weather |
 |---|---|
-| ![Application dashboard](screenshots/app-dashboard-kannada.jpg) | ![Weather dashboard](screenshots/weather-dashboard-kannada.jpg) |
+| ![Dashboard](screenshots/app-dashboard-kannada.jpg) | ![Weather](screenshots/weather-dashboard-kannada.jpg) |
 
-| Crop explanation | Sensor monitoring |
+| Crop explanation | ESP32 sensor monitoring |
 |---|---|
-| ![Crop recommendation explanation](screenshots/crop-explanation-kannada.jpg) | ![ESP32 sensor monitoring](screenshots/esp32-sensor-monitoring.jpg) |
+| ![Crop explanation](screenshots/crop-explanation-kannada.jpg) | ![Sensor monitoring](screenshots/esp32-sensor-monitoring.jpg) |
 
 | Market prices | Government schemes |
 |---|---|
 | ![Market prices](screenshots/market-prices-kannada.jpg) | ![Government schemes](screenshots/government-schemes-kannada.jpg) |
 
-## Repository layout
+## Technology Stack
+
+| Area | Technologies / components |
+|---|---|
+| Mobile application | Flutter, Dart |
+| State management | Provider |
+| Machine-learning inference | ONNX model, ONNX Runtime integration |
+| Explainability | Crop-range analysis and rule-based explanations |
+| IoT connectivity | ESP32, HTTP/WebSocket-related Flutter packages |
+| Local storage | JSON/file-based prediction history, shared preferences |
+| Networking | HTTP |
+| Location | Geolocator, Geocoding |
+| Charts and UI | fl_chart, Google Fonts, Lottie |
+| Localization | Flutter localization, English and Kannada ARB resources |
+
+## System Flow
+
+```text
+Soil / environmental sensors
+            |
+            v
+          ESP32
+            |
+            v
+   Sensor data connection
+            |
+            v
+       Flutter app
+            |
+            v
+   Input validation / mapping
+            |
+            v
+       ONNX model
+            |
+            v
+     Crop prediction
+            |
+            v
+   Explainability service
+            |
+            v
+ Recommendation + explanation
+            |
+            v
+       Local history
+```
+
+The diagram describes the intended application flow represented by the supplied source. The live hardware path depends on the separately configured ESP32 firmware and compatible sensor endpoints.
+
+## Model Input
+
+The current ML service constructs the model input using the following feature order:
+
+| Position | Feature |
+|---:|---|
+| 1 | Nitrogen |
+| 2 | Phosphorus |
+| 3 | Potassium |
+| 4 | Temperature |
+| 5 | Humidity |
+| 6 | pH |
+| 7 | Rainfall |
+
+The model asset included in the supplied project is:
+
+```text
+assets/models/crop_prediction_model_ir9.onnx
+```
+
+Before using the model for real-world recommendations, verify that its training-time feature order, preprocessing/scaling, expected tensor shape, output mapping, and crop-label order match the application code.
+
+## Project Structure
 
 ```text
 .
+├── android/                   # Android platform project
+├── ios/                       # iOS platform project
+├── web/                       # Flutter web platform files
 ├── assets/
-│   ├── animations/
-│   └── models/
+│   ├── animations/            # Lottie animations
+│   └── models/                # ONNX crop prediction model
 ├── lib/
-│   ├── l10n/
-│   ├── models/
-│   ├── providers/
-│   ├── screens/
-│   ├── services/
-│   ├── theme/
-│   └── widgets/
-├── android/
-├── ios/
-├── web/
-├── test/
-├── docs/
-├── pubspec.yaml
+│   ├── l10n/                  # English and Kannada localization
+│   ├── models/                # Application data models
+│   ├── providers/             # Provider state management
+│   ├── screens/               # Dashboard and feature screens
+│   ├── services/              # ML, XAI, sensor, weather, market services
+│   ├── theme/                 # Theme configuration
+│   └── widgets/               # Reusable UI components
+├── screenshots/               # Application screenshots
+├── test/                      # Flutter tests
+├── CONTRIBUTIONS.md           # Project provenance and contribution notes
+├── API_CONFIGURATION.md       # Optional API key configuration
+├── GOVT_SCHEMES_GUIDE.md      # Government schemes feature notes
+├── LOCALIZATION_GUIDE.md      # Localization notes
+├── pubspec.yaml               # Flutter dependencies and assets
 └── README.md
 ```
 
-## Run locally
+## Getting Started
 
 ### Prerequisites
+- Flutter SDK compatible with the version constraints in `pubspec.yaml`
+- Dart SDK (`>=3.0.0 <4.0.0`)
+- Android Studio or VS Code with Flutter tooling
+- Android emulator or physical Android device
 
-- Flutter SDK compatible with the constraints in `pubspec.yaml`
-- Dart SDK
-- Android Studio or VS Code with Flutter extensions
-- An Android device/emulator (or another Flutter-supported target)
-
-### Setup
+### Install dependencies
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/Edge-AI-Explainable-Crop-Recommendation.git
-cd Edge-AI-Explainable-Crop-Recommendation
 flutter pub get
+```
+
+### Generate localization files
+
+If generated localization files are not present or ARB resources have changed:
+
+```bash
+flutter gen-l10n
+```
+
+### Run the application
+
+```bash
 flutter run
 ```
 
-### Optional API configuration
+To build an Android APK:
 
-Weather and news integrations read API keys from Dart compile-time environment values. Do not commit real keys.
+```bash
+flutter build apk
+```
+
+## Optional API Configuration
+
+The weather and news services use compile-time Dart environment values. Supply keys at run time/build time rather than committing them to source control.
 
 ```bash
 flutter run \
-  --dart-define=OPENWEATHER_API_KEY=your_key \
-  --dart-define=NEWS_API_KEY=your_key
+  --dart-define=OPENWEATHER_API_KEY=your_openweather_key \
+  --dart-define=NEWS_API_KEY=your_news_api_key
 ```
 
-If keys are not supplied, live API features may fall back or return unavailable data. For production mobile applications, remember that compile-time values embedded in a client app can be extracted; use restricted keys or a backend proxy where appropriate.
+See [API_CONFIGURATION.md](API_CONFIGURATION.md).
 
-## Model and input details
+> **Security note:** Compile-time values embedded in a client application can be extracted from the built app. Use appropriately restricted keys or a backend proxy for production. Rotate any credentials that may have been committed in an earlier version of the project.
 
-The crop model file included in `assets/models/` is `crop_prediction_model_ir9.onnx`. The current ML service constructs an input vector in this order:
+## Hardware Integration
 
-1. Nitrogen
-2. Phosphorus
-3. Potassium
-4. Temperature
-5. Humidity
-6. pH
-7. Rainfall
+The mobile application includes an ESP32 monitoring interface. To use live sensor data:
 
-The service uses the crop-label list defined in `lib/services/ml_service.dart`. Ensure that the model's training-time feature order, scaling, output shape and label order match this implementation before relying on predictions.
+1. Prepare and flash compatible ESP32 firmware.
+2. Connect the ESP32 and mobile device to the required network.
+3. Confirm the ESP32 address, port, endpoint paths, and response format match the Flutter sensor service.
+4. Connect and calibrate the required sensors.
+5. Test readings independently before using them as inputs to crop prediction.
 
-## Explainability and prediction history
+The repository snapshot does not by itself establish that every hardware configuration is connected or currently operational. Refer to the firmware and hardware documentation available in your own project materials.
 
-The app generates explanations containing:
-- Main reason for the recommended crop
-- Feature values and configured importance weights
-- Positive, negative or neutral impact labels
-- Favorable and limiting conditions
-- A detailed human-readable summary
+## Documentation
 
-Prediction history is stored locally in the app's documents directory as JSON and is managed by the prediction database service. It is not a cloud database.
+Additional project notes included in this repository:
 
-## Configuration and safety checklist
+- [Government Schemes Guide](GOVT_SCHEMES_GUIDE.md)
+- [Localization Guide](LOCALIZATION_GUIDE.md)
+- [XAI Localization Reference](XAI_LOCALIZATION_REFERENCE.md)
+- [API Configuration](API_CONFIGURATION.md)
+- [Contributions and Project Provenance](CONTRIBUTIONS.md)
 
-Before making this repository public:
+Some supporting notes may describe the state of the project when they were written. Check the current source code and official external portals before relying on time-sensitive details.
 
-- Confirm that you have permission to publish all collaborative source files and model assets.
-- Review `CONTRIBUTIONS.md` and accurately describe your own contribution.
-- Rotate any API keys that were previously committed in another repository.
-- Keep real API keys, passwords, Wi-Fi credentials and Firebase secrets out of source control.
-- Check model and dataset licenses before redistribution.
-- Validate the ONNX model's feature order, preprocessing and label mapping.
-- Test on a physical device before describing hardware integration as fully working.
+## Testing and Validation
 
-## Documentation in this repository
+Before presenting this as a production-ready agricultural decision-support system, validate:
 
-Additional implementation notes are available in:
-- `XAI_AND_DATABASE_IMPLEMENTATION.md`
-- `LOCALIZATION_GUIDE.md`
-- `GOVT_SCHEMES_GUIDE.md`
-- `NEWS_API_SETUP.md`
-- `QUICK_REFERENCE.md`
+- ONNX model input order, preprocessing, output dimensions, and crop-label mapping.
+- Prediction behavior using representative and out-of-range soil/environmental inputs.
+- XAI explanation logic against the actual model behavior.
+- Sensor calibration, communication failures, missing readings, and invalid values.
+- English and Kannada text across all screens.
+- Weather, market, and government-scheme data freshness and API failure handling.
+- Application behavior on a physical Android device.
 
-Some notes may describe the state of the project at the time they were written; verify them against the current source before relying on them.
 
-## Contributions
 
-See [`CONTRIBUTIONS.md`](CONTRIBUTIONS.md). This repository is maintained as a personal portfolio version. Please distinguish personal implementation work from work completed collaboratively.
-
-## License
-
-No license was supplied with the source snapshot. Until the project contributors agree on a license, all rights remain with the respective copyright holders. Do not add an open-source license unless you have permission from the relevant contributors.
