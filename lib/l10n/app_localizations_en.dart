@@ -1,0 +1,1184 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for English (`en`).
+class AppLocalizationsEn extends AppLocalizations {
+  AppLocalizationsEn([String locale = 'en']) : super(locale);
+
+  @override
+  String get appTitle => 'Smart Agriculture Pro';
+
+  @override
+  String get dashboard => 'Dashboard';
+
+  @override
+  String get sensors => 'Sensors';
+
+  @override
+  String get assistant => 'Assistant';
+
+  @override
+  String get weather => 'Weather';
+
+  @override
+  String get market => 'Market';
+
+  @override
+  String get schemes => 'Schemes';
+
+  @override
+  String get goodMorning => 'Good Morning, Farmer!';
+
+  @override
+  String get farmStatus =>
+      'Your farm is looking great today. Check your sensors and get AI-powered recommendations.';
+
+  @override
+  String get temperature => 'Temperature';
+
+  @override
+  String get humidity => 'Humidity';
+
+  @override
+  String get soilHealth => 'Soil Health';
+
+  @override
+  String get predictedCrop => 'Predicted Crop';
+
+  @override
+  String get marketPrice => 'Market Price';
+
+  @override
+  String get activeAlerts => 'Active Alerts';
+
+  @override
+  String get aiAssistant => 'AI Assistant';
+
+  @override
+  String get voiceChatSupport => 'Voice & Chat Support';
+
+  @override
+  String get weatherAlerts => 'Weather Alerts';
+
+  @override
+  String get smartForecasting => 'Smart Forecasting';
+
+  @override
+  String get marketplace => 'Marketplace';
+
+  @override
+  String get connectBuyers => 'Connect with Buyers';
+
+  @override
+  String get govSchemes => 'Gov. Schemes';
+
+  @override
+  String get subsidyInfo => 'Subsidy Information';
+
+  @override
+  String get recentActivity => 'Recent Activity';
+
+  @override
+  String get noSensorData => 'No Sensor Data';
+
+  @override
+  String get connectESP32 => 'Connect to ESP32 to start monitoring';
+
+  @override
+  String get startMonitoring => 'Start Monitoring';
+
+  @override
+  String get stopMonitoring => 'Stop Monitoring';
+
+  @override
+  String get connecting => 'Connecting...';
+
+  @override
+  String get connected => 'Connected';
+
+  @override
+  String get disconnected => 'Disconnected';
+
+  @override
+  String get govSchemesAvailable => 'Government Schemes Available';
+
+  @override
+  String get searchingSchemes => 'Searching schemes for your region...';
+
+  @override
+  String get noSchemesFound => 'No schemes found for your region';
+
+  @override
+  String get eligibility => 'Eligibility';
+
+  @override
+  String get amount => 'Amount';
+
+  @override
+  String get deadline => 'Deadline';
+
+  @override
+  String get applyNow => 'Apply Now';
+
+  @override
+  String get schemesAvailable => 'schemes';
+
+  @override
+  String get showingSchemes => 'Showing schemes for:';
+
+  @override
+  String get allCategories => 'All';
+
+  @override
+  String get benefits => 'Benefits';
+
+  @override
+  String get ministry => 'Ministry';
+
+  @override
+  String get region => 'Region';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get schemeStatus => 'Status';
+
+  @override
+  String get noSchemesAvailable => 'No schemes available';
+
+  @override
+  String get schemeDetails => 'Scheme Details';
+
+  @override
+  String get unableToOpenLink => 'Unable to open link';
+
+  @override
+  String get categoryIncomeSupport => 'Income Support';
+
+  @override
+  String get categoryInsurance => 'Insurance';
+
+  @override
+  String get categoryEnergy => 'Energy & Infrastructure';
+
+  @override
+  String get categoryIrrigation => 'Irrigation';
+
+  @override
+  String get categoryCredit => 'Credit & Finance';
+
+  @override
+  String get categorySoilManagement => 'Soil Management';
+
+  @override
+  String get categoryMarketAccess => 'Market Access';
+
+  @override
+  String get categoryOrganicFarming => 'Organic Farming';
+
+  @override
+  String get categoryHorticulture => 'Horticulture';
+
+  @override
+  String get categoryMechanization => 'Mechanization';
+
+  @override
+  String get categoryFPOSupport => 'FPO Support';
+
+  @override
+  String get categoryInputSubsidy => 'Input Subsidy';
+
+  @override
+  String get allIndia => 'All India';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get selectLanguage => 'Select Language';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get kannada => 'ಕನ್ನಡ';
+
+  @override
+  String get monitor => 'Monitor';
+
+  @override
+  String get liveSensorData => 'Live Sensor Data';
+
+  @override
+  String get predict => 'Predict';
+
+  @override
+  String get aiRecommendations => 'AI Recommendations';
+
+  @override
+  String get weatherForecast => 'Weather Forecast';
+
+  @override
+  String get priceTracker => 'Price Tracker';
+
+  @override
+  String get realTimeMonitoring => 'Real-Time Monitoring';
+
+  @override
+  String get liveSensorDataFromESP32 =>
+      'Live sensor data from your ESP32 devices';
+
+  @override
+  String get noSensorDataAvailable => 'No Sensor Data';
+
+  @override
+  String get connectESP32ToStart =>
+      'Connect your ESP32 sensors to start monitoring';
+
+  @override
+  String get liveSensorReadings => 'Live Sensor Readings';
+
+  @override
+  String get live => 'LIVE';
+
+  @override
+  String get soilPH => 'Soil pH';
+
+  @override
+  String get moisture => 'Moisture';
+
+  @override
+  String get nitrogen => 'Nitrogen';
+
+  @override
+  String get phosphorus => 'Phosphorus';
+
+  @override
+  String get potassium => 'Potassium';
+
+  @override
+  String get sensorStatus => 'Sensor Status';
+
+  @override
+  String get dataHistory => 'Data History';
+
+  @override
+  String get last24Hours => 'Last 24 Hours';
+
+  @override
+  String get noHistoryData => 'No history data available';
+
+  @override
+  String get sensorStatusAnalysis => 'Sensor Status Analysis';
+
+  @override
+  String get optimal => 'OPTIMAL';
+
+  @override
+  String get optimalRange => 'Optimal Range';
+
+  @override
+  String get recentDataLog => 'Recent Data Log';
+
+  @override
+  String get readings => 'readings';
+
+  @override
+  String get secondsAgo => 's ago';
+
+  @override
+  String get minutesAgo => 'm ago';
+
+  @override
+  String get hoursAgo => 'h ago';
+
+  @override
+  String get prices => 'Prices';
+
+  @override
+  String get trending => 'Trending';
+
+  @override
+  String get news => 'News';
+
+  @override
+  String get loadingMarketData => 'Loading market data...';
+
+  @override
+  String get marketSummary => 'Market Summary';
+
+  @override
+  String get rising => 'Rising';
+
+  @override
+  String get falling => 'Falling';
+
+  @override
+  String get stable => 'Stable';
+
+  @override
+  String get lastUpdated => 'Last updated';
+
+  @override
+  String get currentPrices => 'Current Prices';
+
+  @override
+  String get perKg => 'per kg';
+
+  @override
+  String get priceChange => 'Price Change';
+
+  @override
+  String get trendingCrops => 'Trending Crops';
+
+  @override
+  String get highDemand => 'High Demand';
+
+  @override
+  String get priceIncreasing => 'Price Increasing';
+
+  @override
+  String get seasonalCrop => 'Seasonal Crop';
+
+  @override
+  String get marketNews => 'Market News';
+
+  @override
+  String get readMore => 'Read More';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get marketError => 'Market Error';
+
+  @override
+  String get selectState => 'Select State';
+
+  @override
+  String get searchCropOrMarket => 'Search crop or market';
+
+  @override
+  String get commodityPrices => 'Commodity Prices';
+
+  @override
+  String get perQuintal => 'quintal';
+
+  @override
+  String get risingPrices => 'Rising Prices';
+
+  @override
+  String get fallingPrices => 'Falling Prices';
+
+  @override
+  String get noMarketNewsAvailable => 'No market news available';
+
+  @override
+  String get failedToLoadMarketData => 'Failed to load market data';
+
+  @override
+  String get stateAndhraPradesh => 'Andhra Pradesh';
+
+  @override
+  String get stateArunachalPradesh => 'Arunachal Pradesh';
+
+  @override
+  String get stateAssam => 'Assam';
+
+  @override
+  String get stateBihar => 'Bihar';
+
+  @override
+  String get stateChhattisgarh => 'Chhattisgarh';
+
+  @override
+  String get stateGoa => 'Goa';
+
+  @override
+  String get stateGujarat => 'Gujarat';
+
+  @override
+  String get stateHaryana => 'Haryana';
+
+  @override
+  String get stateHimachalPradesh => 'Himachal Pradesh';
+
+  @override
+  String get stateJharkhand => 'Jharkhand';
+
+  @override
+  String get stateKarnataka => 'Karnataka';
+
+  @override
+  String get stateKerala => 'Kerala';
+
+  @override
+  String get stateMadhyaPradesh => 'Madhya Pradesh';
+
+  @override
+  String get stateMaharashtra => 'Maharashtra';
+
+  @override
+  String get stateManipur => 'Manipur';
+
+  @override
+  String get stateMeghalaya => 'Meghalaya';
+
+  @override
+  String get stateMizoram => 'Mizoram';
+
+  @override
+  String get stateNagaland => 'Nagaland';
+
+  @override
+  String get stateOdisha => 'Odisha';
+
+  @override
+  String get statePunjab => 'Punjab';
+
+  @override
+  String get stateRajasthan => 'Rajasthan';
+
+  @override
+  String get stateSikkim => 'Sikkim';
+
+  @override
+  String get stateTamilNadu => 'Tamil Nadu';
+
+  @override
+  String get stateTelangana => 'Telangana';
+
+  @override
+  String get stateTripura => 'Tripura';
+
+  @override
+  String get stateUttarPradesh => 'Uttar Pradesh';
+
+  @override
+  String get stateUttarakhand => 'Uttarakhand';
+
+  @override
+  String get stateWestBengal => 'West Bengal';
+
+  @override
+  String get loadingWeatherData => 'Loading weather data...';
+
+  @override
+  String get weatherError => 'Weather Error';
+
+  @override
+  String get noWeatherData => 'No Weather Data';
+
+  @override
+  String get weatherDetails => 'Weather Details';
+
+  @override
+  String get windSpeed => 'Wind Speed';
+
+  @override
+  String get visibility => 'Visibility';
+
+  @override
+  String get feelsLike => 'Feels Like';
+
+  @override
+  String get farmingRecommendations => 'Farming Recommendations';
+
+  @override
+  String get updatedAt => 'Updated';
+
+  @override
+  String get aiCropAdvisor => 'AI Crop Advisor';
+
+  @override
+  String get intelligentCropPrediction =>
+      'Intelligent crop prediction & recommendations';
+
+  @override
+  String get checkOnnxRuntime => 'Check ONNX Runtime';
+
+  @override
+  String get runAIPrediction => 'Run AI Prediction';
+
+  @override
+  String get running => 'Running...';
+
+  @override
+  String get simulate => 'Simulate';
+
+  @override
+  String get noPredictionsYet => 'No predictions yet';
+
+  @override
+  String get noPredictionData => 'No Prediction Data';
+
+  @override
+  String get connectSensorsOrSimulate =>
+      'Connect sensors or start simulation to get predictions';
+
+  @override
+  String get suitability => 'Suitability';
+
+  @override
+  String get soilQuality => 'Soil Quality';
+
+  @override
+  String get growthPotential => 'Growth Potential';
+
+  @override
+  String get riskLevel => 'Risk Level';
+
+  @override
+  String get seasonMatch => 'Season Match';
+
+  @override
+  String get excellent => 'Excellent';
+
+  @override
+  String get good => 'Good';
+
+  @override
+  String get fair => 'Fair';
+
+  @override
+  String get veryHigh => 'Very High';
+
+  @override
+  String get high => 'High';
+
+  @override
+  String get moderate => 'Moderate';
+
+  @override
+  String get medium => 'Medium';
+
+  @override
+  String get low => 'Low';
+
+  @override
+  String get tomatoes => 'Tomatoes';
+
+  @override
+  String get potatoes => 'Potatoes';
+
+  @override
+  String get leafyGreens => 'Leafy Greens';
+
+  @override
+  String get peppers => 'Peppers';
+
+  @override
+  String get legumes => 'Legumes';
+
+  @override
+  String get herbs => 'Herbs';
+
+  @override
+  String get optimalPHHighNitrogen => 'Optimal pH and high nitrogen levels';
+
+  @override
+  String get goodPHPhosphorus => 'Good pH and phosphorus levels';
+
+  @override
+  String get highNitrogenMoisture => 'High nitrogen and moisture content';
+
+  @override
+  String get goodPHPotassium => 'Good pH and potassium levels';
+
+  @override
+  String get nitrogenFixers => 'Nitrogen fixers, improve soil quality';
+
+  @override
+  String get adaptableToSoil => 'Adaptable to various soil conditions';
+
+  @override
+  String get governmentSchemesScreen => 'Government Schemes Screen';
+
+  @override
+  String get sensorConnection => 'Sensor Connection';
+
+  @override
+  String get status => 'Status';
+
+  @override
+  String get dataPoints => 'Data Points';
+
+  @override
+  String get rate => 'Rate';
+
+  @override
+  String get connectToESP32ForRealData =>
+      'Connect to ESP32 for real sensor data:';
+
+  @override
+  String get esp32IPAddress => 'ESP32 IP Address';
+
+  @override
+  String get port => 'Port';
+
+  @override
+  String get connectToESP32Button => 'Connect to ESP32';
+
+  @override
+  String get useTestData => 'Use Test Data';
+
+  @override
+  String get testDataModeActive => 'Test Data Mode Active';
+
+  @override
+  String get stopTest => 'Stop Test';
+
+  @override
+  String get usingSimulatedData =>
+      'Using simulated sensor data for testing purposes.';
+
+  @override
+  String get esp32Connected => 'ESP32 Connected';
+
+  @override
+  String get disconnect => 'Disconnect';
+
+  @override
+  String get receivingLiveData =>
+      'Receiving live data from ESP32 every 3 seconds.';
+
+  @override
+  String get connectingToESP32 => 'Connecting to ESP32...';
+
+  @override
+  String get connectionError => 'Connection Error:';
+
+  @override
+  String get latestSensorReading => 'Latest Sensor Reading:';
+
+  @override
+  String get simulationModeActive => 'Simulation Mode Active';
+
+  @override
+  String get refresh => 'Refresh';
+
+  @override
+  String get aiCropAdvisorTitle => 'AI Crop Advisor';
+
+  @override
+  String get smartCropPredictions =>
+      'Smart crop predictions · Soil insights · Farming tips';
+
+  @override
+  String get runningDots => 'Running...';
+
+  @override
+  String get runAIPredictionButton => 'Run AI Prediction';
+
+  @override
+  String get simulateButton => 'Simulate';
+
+  @override
+  String get noPredictionsYetTitle => 'No predictions yet';
+
+  @override
+  String get runAIPredictionToSeeResults =>
+      'Run the AI prediction to see results';
+
+  @override
+  String get predictionError => 'Prediction error:';
+
+  @override
+  String get noPredictionDataTitle => 'No Prediction Data';
+
+  @override
+  String get connectSensorsOrStartSimulation =>
+      'Connect sensors or start simulation to get predictions';
+
+  @override
+  String get startingDots => 'Starting...';
+
+  @override
+  String get simulateAndRun => 'Simulate & Run';
+
+  @override
+  String get recommendedCropsTitle => 'Recommended Crops';
+
+  @override
+  String get modelRecommendationSubtitle => 'Model recommendation';
+
+  @override
+  String get confidenceLabel => 'Confidence';
+
+  @override
+  String get topAlternatives => 'Top alternatives';
+
+  @override
+  String get soilLabel => 'Soil';
+
+  @override
+  String get issuesLabel => 'issues';
+
+  @override
+  String get tipsLabel => 'Tips';
+
+  @override
+  String get primaryLabel => 'Primary';
+
+  @override
+  String get advisoryLabel => 'Advisory';
+
+  @override
+  String get viewSoilRecommendationsTitle => 'View soil recommendations';
+
+  @override
+  String get noMajorSoilIssues => 'No major soil issues detected.';
+
+  @override
+  String get optimalPHHighNitrogenReason =>
+      'Optimal pH and high nitrogen levels';
+
+  @override
+  String get goodPHPhosphorusReason => 'Good pH and phosphorus levels';
+
+  @override
+  String get highNitrogenMoistureReason => 'High nitrogen and moisture content';
+
+  @override
+  String get goodPHPotassiumReason => 'Good pH and potassium levels';
+
+  @override
+  String get nitrogenFixersReason => 'Nitrogen fixers, improve soil quality';
+
+  @override
+  String get adaptableToSoilReason => 'Adaptable to various soil conditions';
+
+  @override
+  String get cropTomatoes => 'Tomatoes';
+
+  @override
+  String get cropPotatoes => 'Potatoes';
+
+  @override
+  String get cropLeafyGreens => 'Leafy Greens';
+
+  @override
+  String get cropPeppers => 'Peppers';
+
+  @override
+  String get cropLegumes => 'Legumes';
+
+  @override
+  String get cropHerbs => 'Herbs';
+
+  @override
+  String get cropRice => 'Rice';
+
+  @override
+  String get cropMaize => 'Maize';
+
+  @override
+  String get cropChickpea => 'Chickpea';
+
+  @override
+  String get cropKidneybeans => 'Kidney Beans';
+
+  @override
+  String get cropPigeonpeas => 'Pigeon Peas';
+
+  @override
+  String get cropMothbeans => 'Moth Beans';
+
+  @override
+  String get cropMungbean => 'Mung Bean';
+
+  @override
+  String get cropBlackgram => 'Black Gram';
+
+  @override
+  String get cropLentil => 'Lentil';
+
+  @override
+  String get cropPomegranate => 'Pomegranate';
+
+  @override
+  String get cropBanana => 'Banana';
+
+  @override
+  String get cropMango => 'Mango';
+
+  @override
+  String get cropGrapes => 'Grapes';
+
+  @override
+  String get cropWatermelon => 'Watermelon';
+
+  @override
+  String get cropMuskmelon => 'Muskmelon';
+
+  @override
+  String get cropApple => 'Apple';
+
+  @override
+  String get cropOrange => 'Orange';
+
+  @override
+  String get cropPapaya => 'Papaya';
+
+  @override
+  String get cropCoconut => 'Coconut';
+
+  @override
+  String get cropCotton => 'Cotton';
+
+  @override
+  String get cropJute => 'Jute';
+
+  @override
+  String get cropCoffee => 'Coffee';
+
+  @override
+  String get cropWheat => 'Wheat';
+
+  @override
+  String get cropBarley => 'Barley';
+
+  @override
+  String get cropSorghum => 'Sorghum';
+
+  @override
+  String get cropPearl => 'Pearl Millet';
+
+  @override
+  String get cropFinger => 'Finger Millet';
+
+  @override
+  String get cropOnion => 'Onion';
+
+  @override
+  String get cropTomato => 'Tomato';
+
+  @override
+  String get cropPotato => 'Potato';
+
+  @override
+  String get cropBrinjal => 'Brinjal';
+
+  @override
+  String get cropCauliflower => 'Cauliflower';
+
+  @override
+  String get cropCabbage => 'Cabbage';
+
+  @override
+  String get cropCarrot => 'Carrot';
+
+  @override
+  String get cropChilli => 'Chilli';
+
+  @override
+  String get cropCoriander => 'Coriander';
+
+  @override
+  String get cropGarlic => 'Garlic';
+
+  @override
+  String get cropGinger => 'Ginger';
+
+  @override
+  String get cropLadyFinger => 'Lady Finger';
+
+  @override
+  String get cropTurmeric => 'Turmeric';
+
+  @override
+  String get cropGroundnut => 'Groundnut';
+
+  @override
+  String get cropSoybean => 'Soybean';
+
+  @override
+  String get cropSunflower => 'Sunflower';
+
+  @override
+  String get cropMustard => 'Mustard';
+
+  @override
+  String get cropSesame => 'Sesame';
+
+  @override
+  String get cropCastor => 'Castor';
+
+  @override
+  String get cropSugarcane => 'Sugarcane';
+
+  @override
+  String get cropTea => 'Tea';
+
+  @override
+  String get cropCardamom => 'Cardamom';
+
+  @override
+  String get cropBlackPepper => 'Black Pepper';
+
+  @override
+  String get cropBeetleLeaf => 'Beetle Leaf';
+
+  @override
+  String get cropAreca => 'Areca Nut';
+
+  @override
+  String get cropCashew => 'Cashew';
+
+  @override
+  String get cropGuava => 'Guava';
+
+  @override
+  String get cropSapota => 'Sapota';
+
+  @override
+  String get cropPineapple => 'Pineapple';
+
+  @override
+  String get cropLemon => 'Lemon';
+
+  @override
+  String get cropSweet => 'Sweet Lime';
+
+  @override
+  String get cropCucumber => 'Cucumber';
+
+  @override
+  String get cropBitterGourd => 'Bitter Gourd';
+
+  @override
+  String get cropBottleGourd => 'Bottle Gourd';
+
+  @override
+  String get cropRidgeGourd => 'Ridge Gourd';
+
+  @override
+  String get cropPumpkin => 'Pumpkin';
+
+  @override
+  String get cropDrumstick => 'Drumstick';
+
+  @override
+  String get cropBeans => 'Beans';
+
+  @override
+  String get cropPeas => 'Peas';
+
+  @override
+  String get cropRadish => 'Radish';
+
+  @override
+  String get cropSpinach => 'Spinach';
+
+  @override
+  String get cropFenugreek => 'Fenugreek';
+
+  @override
+  String get cropMint => 'Mint';
+
+  @override
+  String get cropCurryLeaves => 'Curry Leaves';
+
+  @override
+  String get cropAshGourd => 'Ashgourd';
+
+  @override
+  String get cropAmaranthus => 'Amaranthus';
+
+  @override
+  String get cropCapsicum => 'Capsicum';
+
+  @override
+  String get cropBeet => 'Beetroot';
+
+  @override
+  String get cropSnakeGourd => 'Snake Gourd';
+
+  @override
+  String get cropClusterBeans => 'Cluster Beans';
+
+  @override
+  String get cropElephantYam => 'Elephant Yam';
+
+  @override
+  String get cropLittleGourd => 'Little Gourd';
+
+  @override
+  String get cropRatTailRadish => 'Rat Tail Radish';
+
+  @override
+  String get cropPeasCod => 'Peas';
+
+  @override
+  String get cropSweetPumpkin => 'Sweet Pumpkin';
+
+  @override
+  String get cropRidgeGuard => 'Ridge Gourd';
+
+  @override
+  String get cropTenderCoconut => 'Tender Coconut';
+
+  @override
+  String get cropPaddy => 'Paddy';
+
+  @override
+  String get cropMethi => 'Fenugreek Leaves';
+
+  @override
+  String get cropTurnip => 'Turnip';
+
+  @override
+  String get cropPapayaRaw => 'Raw Papaya';
+
+  @override
+  String get cropBroadBeans => 'Broad Beans';
+
+  @override
+  String get cropTondekai => 'Ivy Gourd';
+
+  @override
+  String get cropHorseGram => 'Horse Gram';
+
+  @override
+  String get cropKnolKhol => 'Knol Khol';
+
+  @override
+  String get cropGreenAvare => 'Green Avare';
+
+  @override
+  String get soil => 'Soil';
+
+  @override
+  String get overall => 'Overall';
+
+  @override
+  String xaiWhyCrop(String crop) {
+    return 'Why $crop?';
+  }
+
+  @override
+  String get xaiFeatureAnalysis => 'Feature Analysis';
+
+  @override
+  String get xaiFavorableConditions => 'Favorable Conditions';
+
+  @override
+  String get xaiLimitingFactors => 'Limiting Factors';
+
+  @override
+  String get xaiAIInsight => 'AI Insight';
+
+  @override
+  String get xaiImportance => 'Importance';
+
+  @override
+  String get xaiPositiveImpact => 'Positive';
+
+  @override
+  String get xaiNegativeImpact => 'Negative';
+
+  @override
+  String get xaiNeutralImpact => 'Neutral';
+
+  @override
+  String get featureNitrogen => 'Nitrogen (N)';
+
+  @override
+  String get featurePhosphorus => 'Phosphorus (P)';
+
+  @override
+  String get featurePotassium => 'Potassium (K)';
+
+  @override
+  String get featureTemperature => 'Temperature';
+
+  @override
+  String get featureHumidity => 'Humidity';
+
+  @override
+  String get featurePH => 'Soil pH';
+
+  @override
+  String get featureRainfall => 'Rainfall';
+
+  @override
+  String get predictionHistory => 'Prediction History';
+
+  @override
+  String get noPredictionHistory => 'No Prediction History';
+
+  @override
+  String get runPredictionsToSeeHistory =>
+      'Run some predictions to see them here';
+
+  @override
+  String get statistics => 'Statistics';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get avgConfidence => 'Avg Confidence';
+
+  @override
+  String get topCrop => 'Top Crop';
+
+  @override
+  String get clearAll => 'Clear All';
+
+  @override
+  String get clearAllPredictions => 'Clear All Predictions?';
+
+  @override
+  String get clearAllConfirmation =>
+      'This will permanently delete all prediction history. This action cannot be undone.';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get deleteAll => 'Delete All';
+
+  @override
+  String get allPredictionsCleared => 'All predictions cleared';
+
+  @override
+  String get predictionDeleted => 'Prediction deleted';
+
+  @override
+  String get errorLoadingPredictions => 'Error loading predictions';
+
+  @override
+  String get errorDeletingPrediction => 'Error deleting prediction';
+
+  @override
+  String get errorClearingPredictions => 'Error clearing predictions';
+
+  @override
+  String get sensorData => 'Sensor Data';
+
+  @override
+  String get alternativeCrops => 'Alternative Crops';
+
+  @override
+  String get predictionSaved => 'Prediction saved to database';
+
+  @override
+  String get failedToSavePrediction => 'Failed to save prediction';
+
+  @override
+  String get degreesCelsius => '°C';
+
+  @override
+  String get percentage => '%';
+
+  @override
+  String get millimeters => 'mm';
+
+  @override
+  String get delete => 'Delete';
+}
